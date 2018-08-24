@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from "@angular/core";
 import { trigger, state, animate, transition, style } from '@angular/animations';
+import { mapTo, delay } from 'rxjs/operators';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-side-nav-and-content',
@@ -14,6 +16,7 @@ export class SideNavAndContentComponent implements OnInit {
   private DockedClass = 'side-nav-docked';
   private OpenWhileDockedClass = 'sidenav-hover-open';
   private CollapsedClass = 'sidenav-closed';
+  private LeaveHoverClass = 'sidenav-hover-closed'
 
   // Content Area classes
   private ContentWhileDockedClass = 'right-col-when-docked';
@@ -53,7 +56,7 @@ export class SideNavAndContentComponent implements OnInit {
   //when user unhovers the docked menu, the menu should dock itself
   public _toggleSidebarLeave() {
     if (this.SideNavHoverToggleClass === this.OpenWhileDockedClass){
-      this.SideNavHoverToggleClass = "";
+      this.SideNavHoverToggleClass = this.LeaveHoverClass;
     }
   }
 
@@ -62,6 +65,7 @@ export class SideNavAndContentComponent implements OnInit {
     if (this.isOpened){
       this.SideNavToggleClass = this.OpenedClass;
       this.ContentToggleClass = "";
+      this.SideNavHoverToggleClass = "";
 
     } else {
       this.SideNavToggleClass = this.DockedClass;

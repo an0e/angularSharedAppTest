@@ -1,14 +1,3 @@
-.style1 a {
-    color: red;
-}
-.style-2 a {
-    color: purple;
-}
-.style-3 a {
-    color: black;
-}
-
-
 // Containers
 // **********
 
@@ -64,8 +53,8 @@
     background: white;
     z-index: 1;
     height: 100%;
-    -webkit-transition-duration: .15s;
-    transition-duration: .15s;
+    // -webkit-transition-duration: .15s;
+    // transition-duration: .15s;
 }
 
 // Side Nav - Hover
@@ -75,11 +64,19 @@
 .sidenav-hover-open {
     max-width: 240px;
     min-width: 240px;
+    -webkit-transition-duration: .15s;
+    transition-duration: .15s;
     -webkit-transition-delay: .5s;
     transition-delay: .5s;
     box-shadow: 0 0 2.5em rgba(85,85,85,.5);
     // -webkit-box-shadow: 0 16px 10px 0 rgba(0,0,0,0.14), 0 11px 18px 0 rgba(0,0,0,0.12), 0 13px 5px -1px rgba(0,0,0,0.2);
     // box-shadow: 0 16px 10px 0 rgba(0,0,0,0.14), 0 11px 18px 0 rgba(0,0,0,0.12), 0 13px 5px -1px rgba(0,0,0,0.2);
+}
+
+// Side Nav closed after leaving - for animating back
+.sidenav-hover-closed {
+    -webkit-transition-duration: .15s;
+    transition-duration: .15s;
 }
 
 // Side Nav - Closed
@@ -138,16 +135,16 @@
     }
 
     // Navigation 'li' parent
-    .parent-nav-item {
-        white-space: nowrap;
-        overflow: hidden;
-    }
+    // .parent-nav-item {
+    //     white-space: nowrap;
+    //     overflow: hidden;
+    // }
 
     // Navigation 'a' link
     .nav-link {
         display: flex;
         padding: 0px 10px 0px 16px;
-        height: 36px;
+        min-height: 36px;
 
         // Side Nav links
         .nav-link-icon {
