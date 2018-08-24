@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from "@angular/core";
+import { trigger, state, animate, transition, style } from '@angular/animations';
 
 @Component({
   selector: 'app-side-nav-and-content',
@@ -53,10 +54,6 @@ export class SideNavAndContentComponent implements OnInit {
   public _toggleSidebarLeave() {
     if (this.SideNavHoverToggleClass === this.OpenWhileDockedClass){
       this.SideNavHoverToggleClass = "";
-      console.log('leave');
-    }
-    else {
-      console.log('past leave');
     }
   }
 
@@ -69,19 +66,6 @@ export class SideNavAndContentComponent implements OnInit {
     } else {
       this.SideNavToggleClass = this.DockedClass;
       this.ContentToggleClass = this.ContentWhileDockedClass;
-
     }
   }
-
-  
-  
-  //if menu is docked and hovered, then this function will dock the menu when mouse hover is released 
-    // public _toggleSidebarLeave() {
-    //   if (this._hoverIsDocked === true) {
-    //     this._opened = !this._opened;
-    //     this._hoverIsDocked = true;
-    //     this._menuIconsPushed = true;
-    //   }
-    // }
-
 }

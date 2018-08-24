@@ -1,27 +1,133 @@
 <div class="main-container">
  <div id="mySidenav" class="sidenav {{SideNavToggleClass}} {{SideNavHoverToggleClass}}" (mouseenter)="_toggleSidebarHover()" (mouseleave)="_toggleSidebarLeave()">
-    <ul>
-      <li class="nav-item user-nav-item">
-          <a class="nav-link" href="#">
-              <i class="fa fa-question-circle"></i> Item 1</a>
-      </li>
-      <li class="nav-item user-nav-item">
-          <a class="nav-link" href="#">
-              <i class="fa fa-bell"></i> Item 2</a>
-      </li>
-      <li class="nav-item user-nav-item">
-          <a class="nav-link" href="#">
-              <i class="fa fa-map-marker"></i> Item 3</a>
-      </li>
-      <li class="nav-item user-nav-item">
-          <a class="nav-link" href="#">
-              <i class="fa fa-user"></i> Item 4</a>
-      </li>
-      <li class="nav-item user-nav-item">
-          <a class="nav-link" href="#">
-              <i class="fa fa-comment"></i> Item 5</a>
-      </li>
-    </ul>
+      <ul class="sidenav-inner">
+          <li class="parent-nav-item">
+              <a class="nav-link" href="#">
+                  <div class="nav-link-icon">
+                      <div class="nav-link-icon-inner">
+                          <i class="fa fa-home"></i>
+                      </div>
+                  </div> 
+                  <div class="nav-link-title">
+                      <div class="nav-link-title-inner">
+                          Home
+                      </div>
+                  </div>
+              </a>
+          </li>
+          <li class="parent-nav-item">
+              <a class="nav-link" href="#">
+                  <div class="nav-link-icon">
+                      <div class="nav-link-icon-inner">
+                          <i class="fa fa-institution"></i>
+                      </div>
+                  </div> 
+                  <div class="nav-link-title">
+                      <div class="nav-link-title-inner">
+                          FFM Regions
+                      </div>
+                  </div>
+              </a>
+          </li>
+          <li class="parent-nav-item">
+              <a class="nav-link" href="#">
+                  <div class="nav-link-icon">
+                      <div class="nav-link-icon-inner">
+                          <i class="fa fa-bolt"></i>
+                      </div>
+                  </div> 
+                  <div class="nav-link-title">
+                      <div class="nav-link-title-inner">
+                          Events
+                      </div>
+                  </div>
+              </a>
+          </li>
+          <li class="parent-nav-item">
+              <a class="nav-link" href="#">
+                  <div class="nav-link-icon">
+                      <div class="nav-link-icon-inner">
+                          <i class="fa fa-graduation-cap"></i>
+                      </div>
+                  </div> 
+                  <div class="nav-link-title">
+                      <div class="nav-link-title-inner">
+                          My Emergency Roles
+                      </div>
+                  </div>
+              </a>
+          </li>
+          <li class="parent-nav-item">
+              <a class="nav-link" href="#">
+                  <div class="nav-link-icon">
+                      <div class="nav-link-icon-inner">
+                          <i class="fa fa-map-marker"></i>
+                      </div>
+                  </div> 
+                  <div class="nav-link-title">
+                      <div class="nav-link-title-inner">
+                          Mapping
+                      </div>
+                  </div>
+              </a>
+          </li>
+          <li class="parent-nav-item">
+              <a class="nav-link" href="#">
+                  <div class="nav-link-icon">
+                      <div class="nav-link-icon-inner">
+                          <i class="fa fa-users"></i>
+                      </div>
+                  </div> 
+                  <div class="nav-link-title">
+                      <div class="nav-link-title-inner">
+                          People
+                      </div>
+                  </div>
+              </a>
+          </li>
+          <li class="parent-nav-item">
+              <a class="nav-link" href="#">
+                  <div class="nav-link-icon">
+                      <div class="nav-link-icon-inner">
+                          <i class="fa fa-heartbeat"></i>
+                      </div>
+                  </div> 
+                  <div class="nav-link-title">
+                      <div class="nav-link-title-inner">
+                          Safety & Wellbeing
+                      </div>
+                  </div>
+              </a>
+          </li>
+          <li class="parent-nav-item">
+              <a class="nav-link" href="#">
+                  <div class="nav-link-icon">
+                      <div class="nav-link-icon-inner">
+                          <i class="fa fa-cloud"></i>
+                      </div>
+                  </div> 
+                  <div class="nav-link-title">
+                      <div class="nav-link-title-inner">
+                          Weather & Predictions
+                      </div>
+                  </div>
+              </a>
+          </li>
+          <li class="parent-nav-item">
+              <a class="nav-link" href="#">
+                  <div class="nav-link-icon">
+                      <div class="nav-link-icon-inner">
+                          <i class="fa fa-info"></i>
+                      </div>
+                  </div> 
+                  <div class="nav-link-title">
+                      <div class="nav-link-title-inner">
+                          Library
+                      </div>
+                  </div>
+              </a>
+          </li>
+      </ul>
   </div>
 
   <div class="right-col {{ContentToggleClass}}">

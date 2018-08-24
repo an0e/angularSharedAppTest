@@ -33,32 +33,12 @@
 // Side navigation
 .sidenav {
     background-color: #fff;
-    // display: -webkit-box;
-    // display: -moz-box;
-    // display: -webkit-flex;
-    // display: -ms-flexbox;
-    // display: flex;
-    // -webkit-flex-direction: column;
-    // flex-direction: column;
-    // -webkit-flex-shrink: 0;
     max-width: 0px;
     min-width: 0px;
-    // -webkit-transition-duration: .15s;
-    // transition-duration: .15s;
-    // position: relative;
-    // margin-top: 0;
-    // min-height: 1px;
-    // float: left;
 
     ul {
         padding-left: 0px;
-        // width: 100%;
-        // white-space: nowrap;
         list-style-type: none;
-        // display: flex;
-        // flex-direction: column;
-        // text-overflow: ellipsis;
-        // flex-shrink: 0;
     
         li {
 
@@ -77,8 +57,8 @@
     position: fixed;
     display: block;
     list-style-type: none;
-    max-width: 70px;
-    min-width: 70px;
+    max-width: 60px;
+    min-width: 60px;
     white-space: nowrap;
     overflow: hidden;
     background: white;
@@ -95,8 +75,11 @@
 .sidenav-hover-open {
     max-width: 240px;
     min-width: 240px;
-    -webkit-transition-duration: .15s;
-    transition-duration: .15s;
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s;
+    box-shadow: 0 0 2.5em rgba(85,85,85,.5);
+    // -webkit-box-shadow: 0 16px 10px 0 rgba(0,0,0,0.14), 0 11px 18px 0 rgba(0,0,0,0.12), 0 13px 5px -1px rgba(0,0,0,0.2);
+    // box-shadow: 0 16px 10px 0 rgba(0,0,0,0.14), 0 11px 18px 0 rgba(0,0,0,0.12), 0 13px 5px -1px rgba(0,0,0,0.2);
 }
 
 // Side Nav - Closed
@@ -130,7 +113,7 @@
 
 // Container for content area
 .right-col-when-docked {
-    margin-left: 70px;
+    margin-left: 60px;
 }
 
 // Content Area - Closed
@@ -145,16 +128,64 @@
 }
 // ---------------------------------------------------------------------
 
+// Navigation Links
+// *****************
+
+#mySidenav {
+
+    .sidenav-inner {
+        margin-top: 8px;
+    }
+
+    // Navigation 'li' parent
+    .parent-nav-item {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    // Navigation 'a' link
+    .nav-link {
+        display: flex;
+        padding: 0px 10px 0px 16px;
+        height: 36px;
+
+        // Side Nav links
+        .nav-link-icon {
+            -webkit-align-items: center;
+            align-items: center;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            margin-right: 14px;
+            flex-shrink: 0;
+
+            .nav-link-icon-inner {
+                text-align: center;
+                width: 30px;
+
+                i {
+                    font-size: 17px;
+                }
+            }
+        }
+        .nav-link-title {
+            display: flex;
+            font-size: 14px;
+            -webkit-align-items: center;
+            align-items: center;
+            // .nav-link-title-inner {
+
+            // }
+        }
+    }
+}
 
 
 
 
-
-
-
-
-
-
+// TODO: use this for future
 .transition-class {
     -webkit-transition-duration: .15s;
     transition-duration: .15s;

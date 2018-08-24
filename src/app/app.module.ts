@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { ComponentLibraryModule } from 'component-library'
@@ -16,6 +17,7 @@ import { SideNavAndContentComponent } from './side-nav-and-content/side-nav-and-
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ComponentLibraryModule,
     NgbModule.forRoot(),
     SidebarModule.forRoot()
